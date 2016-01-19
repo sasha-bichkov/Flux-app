@@ -2,14 +2,14 @@
   "name": "flux-app",
   "version": "0.0.0",
   "description": "The simple flux application",
-  "main": "gulpfile.babel.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sasha-bichkov/Flux-app.git"
   },
   "keywords": [
     "React",
-    "Flux"
+    "Flux",
+    "Material-ui"
   ],
   "author": "Sasha-Bichkov",
   "license": "MIT",
