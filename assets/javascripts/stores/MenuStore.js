@@ -1,13 +1,14 @@
+import assign from 'object-assign';
 import { EventEmitter } from 'events';
-import AppDispatcher    from '../dispatcher/AppDispatcher';
-import BookConstants    from '../constants/BookConstants';
-import assign           from 'object-assign';
+
+import AppDispatcher from '../dispatcher/AppDispatcher';
+import BookConstants from '../constants/BookConstants';
 
 const CHANGE_EVENT = 'change';
 
 let _open = false;
 
-let MenuStore = assign({}, EventEmitter.prototype, {
+const MenuStore = assign({}, EventEmitter.prototype, {
 
   getOpenState() {
     return _open;
@@ -31,8 +32,8 @@ let MenuStore = assign({}, EventEmitter.prototype, {
 
 const changeState = () => _open = !_open;
 
-MenuStore.dispatchToken = AppDispatcher.register(function(action) {
-  switch(action.actionType) {
+MenuStore.dispatchToken = AppDispatcher.register((action) => {
+  switch (action.actionType) {
     case BookConstants.SHOW_MENU:
       changeState();
       break;
@@ -41,8 +42,8 @@ MenuStore.dispatchToken = AppDispatcher.register(function(action) {
   }
 
   MenuStore.emitChange();
- 
-  return true; 
+
+  return true;
 });
 
 export default MenuStore;

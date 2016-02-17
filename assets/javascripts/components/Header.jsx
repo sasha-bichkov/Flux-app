@@ -31,13 +31,13 @@ export default class Header extends Component {
   getMenuState() {
     return {
       open: MenuStore.getOpenState()
-    }
+    };
   }
 
 
   _onChange() {
     const open = MenuStore.getOpenState();
-    this.setState({ open: open });
+    this.setState({ open });
   }
 
 
@@ -57,6 +57,6 @@ export default class Header extends Component {
           <MenuItem onTouchTap={ this.toggleMenu }>Menu Item 2</MenuItem>
         </LeftNav>
       </div>
-    )
+    );
   }
-};
+}

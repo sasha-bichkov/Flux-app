@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Main   from './Main';
+import Main from './Main';
 import Header from './Header';
 
 
@@ -11,6 +11,6 @@ export default class App extends Component {
         <Header />
         <Main />
       </div>
-    )
+    );
   }
-};
+}

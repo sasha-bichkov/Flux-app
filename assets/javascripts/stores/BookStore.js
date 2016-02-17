@@ -1,7 +1,8 @@
+import assign from 'object-assign';
 import { EventEmitter } from 'events';
-import AppDispatcher    from 'dispatcher/AppDispatcher';
-import BookConstants    from 'dispatcher/BoolConstants';
-import assign           from 'object-assign';
+
+import AppDispatcher from 'dispatcher/AppDispatcher';
+import BookConstants from 'dispatcher/BoolConstants';
 
 
 let BookStore = assign({}, EventEmitter.prototype, {});

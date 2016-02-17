@@ -3,7 +3,7 @@ import BookConstants from '../constants/BookConstants';
 
 
 const MenuActions = {
-  toggleMenu(status) {
+  toggleMenu() {
     AppDispatcher.dispatch({
       actionType: BookConstants.SHOW_MENU
     });
